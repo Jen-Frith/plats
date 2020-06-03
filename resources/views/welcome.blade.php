@@ -65,8 +65,12 @@
 
 
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="mt-5">Dishes List</h3>
+		<div class="panel-heading d-flex justify-content-between align-items-center">
+         <div> <h3 class="mt-5">Dishes List</h3></div>  
+         <div class="mt-4">    
+           <a href="{{route('client.listeSucre')}}"> <input type="submit" class="btn btn-primary ml-5" value="Sucré"></a>
+           <a href="{{route('client.listeSale')}}">     <input type="submit" class="btn btn-primary ml-2" value="Salé"></a>
+        </div>
 		</div>
 		<div class="panel-body">
 			<table class="table table-striped">

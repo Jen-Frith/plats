@@ -28,3 +28,6 @@ Route::get('/', function () {
 
 Route::post('/store', 'ClientController@store', function(){})->name('client.store');
 Route::post('/Estore', 'EntrepriseController@store', function(){})->name('entreprise.store');
+
+Route::get('/Sliste', 'ClientController@liste', function(){})->name('client.listeSucre');
+Route::get('/Saliste', 'ClientController@liste1', function(){})->name('client.listeSale');
