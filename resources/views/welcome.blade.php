@@ -43,7 +43,10 @@
                 @csrf
 				<div class="form-group">
 					<label for="bookTitle">Plat:</label>
-					<input type="text" id="bookTitle" class="form-control" name="name">
+                    <input type="text" id="bookTitle" class="form-control" name="name" value="{{old('name')}}">
+                 @if ($errors->has('name'))
+                  <strong style="color: red">{{ $errors->first('name') }}</strong>
+                    @endif
 				</div>
 				<div class="form-group">
                     <label for="bookAuthor">Saveurs:</label>
@@ -53,11 +56,18 @@
                           
                       <option value="{{$entreprise->id}}">{{$entreprise->nameEntreprise}}</option>
                       @endforeach
+                    </div>
 
-                      
+
+                    <div class="form-group">              
                       <label class="ml-5" for="fr">Quantité:</label>
                       <input name="quantite" class="form-control ml-2" type="number" min="1" max="100" placeholder="quantité">
-				</div>
+                      @if ($errors->has('quantite'))
+                      <strong style="color: red">{{ $errors->first('quantite') }}</strong>
+                        @endif
+                    </div>
+
+
 
 				<input type="submit" class="btn btn-primary ml-2" value="Add Dish">
 			</form>
