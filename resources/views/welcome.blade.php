@@ -53,8 +53,10 @@
                           
                       <option value="{{$entreprise->id}}">{{$entreprise->nameEntreprise}}</option>
                       @endforeach
-                     
 
+                      
+                      <label class="ml-5" for="fr">Quantité:</label>
+                      <input name="quantite" class="form-control ml-2" type="number" min="1" max="100" placeholder="quantité">
 				</div>
 
 				<input type="submit" class="btn btn-primary ml-2" value="Add Dish">
@@ -77,6 +79,7 @@
 				<thead><tr>
 					<th>Dish</th>
                     <th>Flavor</th>
+                    <th>Quantité</th>
 
 				</tr></thead>
 				<tbody>
@@ -91,7 +94,7 @@
                         <i>{{$client->entreprise->nameEntreprise}}</i>
                         </td>
                         <td>
-
+{{$client->quantite}}
 						</td>
 		
 					</tr>

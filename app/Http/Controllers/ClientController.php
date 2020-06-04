@@ -14,6 +14,7 @@ class ClientController extends Controller
 $data=request()->validate([
 
 'name'=>'required|min:5',
+'quantite'=>'required|integer',
 'entreprise_id'=>'required|integer'
 
 ]);
